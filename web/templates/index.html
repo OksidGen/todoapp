@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+{{template "header" .}}
+
+<body>
+    <div class="container" style="width: 400px; margin: auto;">
+        <h2 class="todo_caption">Список задач</h2>
+        <div class="tdlApp">
+            <form method="post" action="/create">
+                <input type="text" name="text" class="newTask" placeholder="Новая задача">
+                <span></span>
+            </form>
+
+            {{template "tasks" .}}
+
+            {{if gt (len .tasks) 0}}
+            <form action="deleteall" method="post">
+                <button class ="deleteall" onclick="return confirm('Are you sure?')">Delete All</button>
+            </form>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{{define "tasks"}}
+<div class="tdList">
+    {{range .tasks}}
+        <div class="tdItem">
+            {{if .Status}}
+            <div class="task completed"  id={{.ID.Hex}}>{{.Text}}</div>
+            <form class="for_form" action="/status" method="post">
+                <input hidden name ="id" value={{.ID.Hex}}>
+                <button class="tdButton statusUndo" name="status" value={{.Status}}>Undo</button>
+            </form>
+            {{else}}
+            <div class="task" id={{.ID.Hex}}>{{.Text}}</div>
+            <form class="for_form" action="/status" method="post">
+                <input hidden name ="id" value={{.ID.Hex}}>
+                <button class="tdButton statusDone" name="status" value={{.Status}}>Done</button>
+            </form>
+            {{end}}
+            <form class="for_form" action="/delete" method="post">
+                <button class="tdButton delete" name="id" value={{.ID.Hex}}>Del</button>
+            </form>
+        </div>
+    {{end}}
+</div>
+{{end}}

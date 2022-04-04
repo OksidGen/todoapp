@@ -1,0 +1,78 @@
+body {
+    text-align: center;
+    margin: 10px;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    
+}
+.newTask {
+    display: inline-block;
+    margin: 20px auto;
+    border: 2px solid #eee;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.tdItem {
+    margin: 10px;
+    cursor: default;
+    border: 2px solid grey;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: auto repeat(2, 50px);
+}
+.tdItem:hover {
+    box-shadow: 0 0 5px;
+}
+
+.task{
+    word-break:break-all;
+    text-align: left;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.completed{
+    color: rgb(150, 150, 150);
+    text-decoration: line-through;
+}
+
+.tdButton {
+    padding: 10px;
+    width: 50px;
+    border: none;
+    text-align: center;
+    border-left: 2px solid grey;
+}
+
+.update{
+    background-color: rgb(200, 200, 200);
+}
+
+.statusDone{
+    background-color: rgb(75, 245, 25);
+}
+
+.statusUndo{
+    background-color: orange;
+}
+
+.delete{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: darkred;
+    color: white;
+}
+
+.for_form{
+    display: flex;
+}
+
+.deleteall{
+    border-radius: 3px;
+    background-color: rgb(180, 0, 0);
+    color: white;
+    border-color: red;
+    font-size: 18px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
